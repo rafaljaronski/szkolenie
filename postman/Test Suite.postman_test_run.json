@@ -1,0 +1,262 @@
+{
+	"id": "c5279c88-aa84-492f-bed3-c2b80c1159dc",
+	"name": "Test Suite",
+	"allTests": [],
+	"timestamp": "2019-11-12T12:37:49.728Z",
+	"collection_id": "bf286469-559a-4303-a8d7-d8fc39fcc115",
+	"folder_id": 0,
+	"target_type": "collection",
+	"environment_id": "810e5a4e-e822-425a-9316-de3ace80fdae",
+	"data": [],
+	"delay": 2000,
+	"count": 10,
+	"collection": {
+		"id": "bf286469-559a-4303-a8d7-d8fc39fcc115",
+		"name": "Test Suite",
+		"order": [
+			"f06cf430-d7ca-4281-a277-8f12d4a82984",
+			"a24f4ee7-67a2-4b75-b6ed-dd3996f2cdc0"
+		],
+		"folders_order": [],
+		"isFavorite": false
+	},
+	"folder": null,
+	"environment": null,
+	"globals": [
+		{
+			"key": "url",
+			"value": "https://gorest.co.in/",
+			"enabled": true
+		},
+		{
+			"key": "token",
+			"value": "R8zC8-ZpRr0MrsHcbEpdhqjpthF6NoBtQZHD",
+			"enabled": true
+		}
+	],
+	"results": [
+		{
+			"name": "users",
+			"id": "f06cf430-d7ca-4281-a277-8f12d4a82984",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Body matches string": true,
+				"Body matches string and status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 10,
+					"fail": 0
+				},
+				"Body matches string": {
+					"pass": 10,
+					"fail": 0
+				},
+				"Body matches string and status code is 200": {
+					"pass": 10,
+					"fail": 0
+				}
+			},
+			"times": [
+				"312",
+				"427",
+				"297",
+				"295",
+				"340",
+				"295",
+				"296",
+				"295",
+				"294",
+				"300"
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Body matches string": true,
+					"Body matches string and status code is 200": true
+				},
+				{
+					"Status code is 200": true,
+					"Body matches string": true,
+					"Body matches string and status code is 200": true
+				},
+				{
+					"Status code is 200": true,
+					"Body matches string": true,
+					"Body matches string and status code is 200": true
+				},
+				{
+					"Status code is 200": true,
+					"Body matches string": true,
+					"Body matches string and status code is 200": true
+				},
+				{
+					"Status code is 200": true,
+					"Body matches string": true,
+					"Body matches string and status code is 200": true
+				},
+				{
+					"Status code is 200": true,
+					"Body matches string": true,
+					"Body matches string and status code is 200": true
+				},
+				{
+					"Status code is 200": true,
+					"Body matches string": true,
+					"Body matches string and status code is 200": true
+				},
+				{
+					"Status code is 200": true,
+					"Body matches string": true,
+					"Body matches string and status code is 200": true
+				},
+				{
+					"Status code is 200": true,
+					"Body matches string": true,
+					"Body matches string and status code is 200": true
+				},
+				{
+					"Status code is 200": true,
+					"Body matches string": true,
+					"Body matches string and status code is 200": true
+				}
+			],
+			"time": "300",
+			"totalRequestTime": 3151,
+			"iterationResults": {}
+		},
+		{
+			"name": "photos",
+			"id": "a24f4ee7-67a2-4b75-b6ed-dd3996f2cdc0",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"Body matches string and status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Body matches string and status code is 200": {
+					"pass": 10,
+					"fail": 0
+				}
+			},
+			"times": [
+				"296",
+				"296",
+				"304",
+				"296",
+				"298",
+				"300",
+				"299",
+				"296",
+				"292",
+				"295"
+			],
+			"allTests": [
+				{
+					"Body matches string and status code is 200": true
+				},
+				{
+					"Body matches string and status code is 200": true
+				},
+				{
+					"Body matches string and status code is 200": true
+				},
+				{
+					"Body matches string and status code is 200": true
+				},
+				{
+					"Body matches string and status code is 200": true
+				},
+				{
+					"Body matches string and status code is 200": true
+				},
+				{
+					"Body matches string and status code is 200": true
+				},
+				{
+					"Body matches string and status code is 200": true
+				},
+				{
+					"Body matches string and status code is 200": true
+				},
+				{
+					"Body matches string and status code is 200": true
+				}
+			],
+			"time": "295",
+			"totalRequestTime": 2972,
+			"iterationResults": {}
+		}
+	],
+	"totalPass": 40,
+	"totalFail": 0,
+	"totalTime": 6123,
+	"lifecycle": "done",
+	"requests": [
+		{
+			"name": "users",
+			"id": "f06cf430-d7ca-4281-a277-8f12d4a82984",
+			"url": "https://gorest.co.in/public-api/users?_format=json&access-token=HGsY_e8Vc3W0ZANeJnoPOljYVG7MvzWL03Rj",
+			"time": "300",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 10,
+					"fail": 0
+				},
+				"Body matches string": {
+					"pass": 10,
+					"fail": 0
+				},
+				"Body matches string and status code is 200": {
+					"pass": 10,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "photos",
+			"id": "a24f4ee7-67a2-4b75-b6ed-dd3996f2cdc0",
+			"url": "https://gorest.co.in/public-api/photos",
+			"time": "295",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"Body matches string and status code is 200": {
+					"pass": 10,
+					"fail": 0
+				}
+			}
+		}
+	],
+	"synced": false
+}

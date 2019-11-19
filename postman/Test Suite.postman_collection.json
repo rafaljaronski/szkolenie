@@ -1,0 +1,160 @@
+{
+	"info": {
+		"_postman_id": "bf286469-559a-4303-a8d7-d8fc39fcc115",
+		"name": "Test Suite",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "users",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "2743decf-e8f0-40d6-91e0-2bb3642e75ce",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"pm.test(\"Body matches string\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"OK. Everything worked as expected.\");",
+							"});",
+							"",
+							"pm.test(\"Body matches string and status code is 200\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"OK. Everything worked as expected.\");",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}public-api/users?_format={{format}}&access-token={{token}}",
+					"host": [
+						"{{url}}public-api"
+					],
+					"path": [
+						"users"
+					],
+					"query": [
+						{
+							"key": "_format",
+							"value": "{{format}}"
+						},
+						{
+							"key": "access-token",
+							"value": "{{token}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "photos",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "13a1a35a-5414-4499-be0e-b209747f52b8",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"pm.test(\"Body matches string\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"OK. Everything worked as expected.\");",
+							"});",
+							"",
+							"pm.test(\"Body matches string and status code is 200\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"OK. Everything worked as expected.\");",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}public-api/photos",
+					"host": [
+						"{{url}}public-api"
+					],
+					"path": [
+						"photos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{url}}public-api/users",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "f30c3c87-9f78-413b-81d0-db5f2e8c80c4",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"pm.test(\"Body matches string\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"OK. Everything worked as expected.\");",
+							"});",
+							"",
+							"pm.test(\"Body matches string and status code is 200\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"OK. Everything worked as expected.\");",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}public-api/users",
+					"host": [
+						"{{url}}public-api"
+					],
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

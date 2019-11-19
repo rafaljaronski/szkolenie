@@ -1,0 +1,383 @@
+{
+	"info": {
+		"_postman_id": "f5d13db0-7227-4b1c-907a-b93d7905bda4",
+		"name": "Fake",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "ping",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "c7a4c74f-cfcd-442f-9e82-904500a49c9b",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"pm.test(\"Body matches string\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"1|\" + pm.globals.get(\"tokenResponse\") + \"|\");",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{protocol}}://{{url}}connection/ping?token1={{token1}}&token2={{token2}}",
+					"protocol": "{{protocol}}",
+					"host": [
+						"{{url}}connection"
+					],
+					"path": [
+						"ping"
+					],
+					"query": [
+						{
+							"key": "token1",
+							"value": "{{token1}}"
+						},
+						{
+							"key": "token2",
+							"value": "{{token2}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getSpeakers",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "b887be31-7af6-46a0-a30f-78f94c4851b1",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"pm.test(\"Body matches string\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"ok|\" + pm.globals.get(\"tokenResponse\") + \"|\");",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{protocol}}://{{url}}connection/getallspeakers?token1={{token1}}&token2={{token2}}",
+					"protocol": "{{protocol}}",
+					"host": [
+						"{{url}}connection"
+					],
+					"path": [
+						"getallspeakers"
+					],
+					"query": [
+						{
+							"key": "token1",
+							"value": "{{token1}}"
+						},
+						{
+							"key": "token2",
+							"value": "{{token2}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getEvents",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "7310b310-a8b2-4401-814c-f9e6cacd53ed",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"pm.test(\"Body matches string\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"ok|\" + pm.globals.get(\"tokenResponse\") + \"|\");",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{protocol}}://{{url}}connection/getevents?token1={{token1}}&token2={{token2}}",
+					"protocol": "{{protocol}}",
+					"host": [
+						"{{url}}connection"
+					],
+					"path": [
+						"getevents"
+					],
+					"query": [
+						{
+							"key": "token1",
+							"value": "{{token1}}"
+						},
+						{
+							"key": "token2",
+							"value": "{{token2}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "pongChange",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "7310b310-a8b2-4401-814c-f9e6cacd53ed",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"pm.test(\"Body matches string\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"1|\" + pm.globals.get(\"tokenResponse\"));",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "change_type",
+							"value": "2",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://aad19cntapipractice.cna.nazwa.pl/connection/pongchange?token1={{token1}}&token2={{token2}}",
+					"protocol": "http",
+					"host": [
+						"aad19cntapipractice",
+						"cna",
+						"nazwa",
+						"pl"
+					],
+					"path": [
+						"connection",
+						"pongchange"
+					],
+					"query": [
+						{
+							"key": "token1",
+							"value": "{{token1}}"
+						},
+						{
+							"key": "token2",
+							"value": "{{token2}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "pingAfterPong",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "c7a4c74f-cfcd-442f-9e82-904500a49c9b",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"pm.test(\"Body matches string\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"1|\" + pm.globals.get(\"tokenResponse\") + \"|00\");",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{protocol}}://{{url}}connection/ping?token1={{token1}}&token2={{token2}}",
+					"protocol": "{{protocol}}",
+					"host": [
+						"{{url}}connection"
+					],
+					"path": [
+						"ping"
+					],
+					"query": [
+						{
+							"key": "token1",
+							"value": "{{token1}}"
+						},
+						{
+							"key": "token2",
+							"value": "{{token2}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "pingReset",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "c7a4c74f-cfcd-442f-9e82-904500a49c9b",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"pm.test(\"Body matches string\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"1|\" + pm.globals.get(\"tokenResponse\"));",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{protocol}}://{{url}}connection/resetping?token1={{token1}}&token2={{token2}}",
+					"protocol": "{{protocol}}",
+					"host": [
+						"{{url}}connection"
+					],
+					"path": [
+						"resetping"
+					],
+					"query": [
+						{
+							"key": "token1",
+							"value": "{{token1}}"
+						},
+						{
+							"key": "token2",
+							"value": "{{token2}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "pingAfterPingReset",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "c7a4c74f-cfcd-442f-9e82-904500a49c9b",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"pm.test(\"Body matches string\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"1|\" + pm.globals.get(\"tokenResponse\") + \"|01\");",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{protocol}}://{{url}}connection/ping?token1={{token1}}&token2={{token2}}",
+					"protocol": "{{protocol}}",
+					"host": [
+						"{{url}}connection"
+					],
+					"path": [
+						"ping"
+					],
+					"query": [
+						{
+							"key": "token1",
+							"value": "{{token1}}"
+						},
+						{
+							"key": "token2",
+							"value": "{{token2}}"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "basic",
+		"basic": [
+			{
+				"key": "password",
+				"value": "{{password}}",
+				"type": "string"
+			},
+			{
+				"key": "username",
+				"value": "{{username}}",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "0d38c380-7275-4eba-aa86-1be6b06a001d",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "2c16a4b5-2af1-4c37-8497-97750efe3a30",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
